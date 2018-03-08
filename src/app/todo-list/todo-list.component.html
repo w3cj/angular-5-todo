@@ -1,0 +1,19 @@
+<ul class="list-group">
+  <li
+    *ngFor="let todo of todos; let i = index"
+    class="list-group-item">
+      <button
+        *ngIf="!todo.isDone"
+        (click)="todo.isDone = true"
+        type="button"
+        class="btn btn-success">DONE</button>
+      <button
+        (click)="removeTodo(i)"
+        type="button"
+        class="btn btn-danger">REMOVE</button>
+      <span
+        [ngClass]="{
+          'todo-done': todo.isDone
+        }">{{todo.title}}</span>
+  </li>
+</ul>

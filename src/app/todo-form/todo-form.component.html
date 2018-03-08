@@ -1,0 +1,13 @@
+<form (ngSubmit)="onSubmit()">
+  <fieldset class="form-group">
+    <label for="newTodo">New Todo</label>
+    <input
+      [(ngModel)]="newTodo"
+      type="text"
+      class="form-control"
+      id="newTodo"
+      name="newTodo"
+      placeholder="Enter a todo.">
+  </fieldset>
+  <button type="submit" class="btn btn-primary">Add Todo</button>
+</form>
